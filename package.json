@@ -1,37 +1,30 @@
+ 
 {
   "name": "eatdaburger",
   "version": "1.0.0",
-  "description": "mysql, express, handlebars app",
-  "main": "index.js",
+  "description": "EatDaBurger! is a restaurant app that lets users input the names of burgers they'd like to eat.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MateosDev/eatdaburger.git"
+    "url": "git+https://github.com/MateosDev/EatDaBurger.git"
   },
-  "keywords": [
-    "smu",
-    "coding",
-    "bootcamp",
-    "javascript",
-    "express",
-    "express",
-    "handlebars",
-    "mysql",
-    "nodejs",
-    "jquery"
-  ],
-  "author": "mateosdev.github.io",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MateosDev/eatdaburger/issues"
+    "url": "https://github.com/MateosDev/EatDaBurger/issues"
   },
-  "homepage": "https://github.com/MateosDev/eatdaburger#readme",
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mysql": "^2.17.1"
+  "homepage": "https://github.com/MateosDev/EatDaBurger#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
