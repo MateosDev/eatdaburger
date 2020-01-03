@@ -1,4 +1,15 @@
-* {
+* .jumbotron {
+  background-image: url("/public/img/handcrafted-burgers.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 10px;
+}
+
+
+
+
+color-overide{
     font-family: "Fontdiner Swanky", cursive;
   }
   
@@ -21,3 +32,4 @@
     max-width: 45%;
     margin: 0 auto;
   }
+  

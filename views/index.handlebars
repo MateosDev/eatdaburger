@@ -1,38 +1,54 @@
-<div class="op-cont">
-    <h1>Eat Da Burger!</h1>
+<div class="container">
 
-    <h2>Burgers on the menu!</h2>
+    <div class="jumbotron">
+        <h1 id="color-override">Eat Da Burger</h1>
+        <p id="color-override">Make Da Burgers, Eat Da Burgers.</p>
+        <br>
+        <h2 id="color-override">Make a Burger</h2>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newburger" id="color-override">New Burger:</label>
+                    <input type="text" id="newburger" name="burger">
+                    <button type="submit" class="btn btn-success" id="addburger"><i class="far fa-arrow-alt-circle-down"></i></button>
+                </div>
+            </form>
+        </panel>
+    </div>
 
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{> burgers/burger-block devour=true}}
-        {{/unless}}
-        {{/each}}
-    </ul>
-
-    <h2>Burgers you demolished!</h2>
-
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devour=false}}
-        {{/if}}
-        {{/each}}
-    </ul>
-
-    <h2>Add a burger, it's okay! This doesn't cost real money!</h2>
-    <form class="create-form">
-
-        <div class="form-group">
-            <label for="ca">What burger is next?</label>
-            <input type="text" id="ca" name="name">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="lefthead"><strong>New Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}">Devour<i class="fas fa-arrow-alt-circle-right"></i></button>
+                                <hr>
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="form-group">
-            <input type="radio" name="devoured" value="0" checked> Buy it.
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="righthead"><strong>Devoured Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                                <hr>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <button type="submit">Hulk Smash This Button!</button>
-    </form>
 </div>
