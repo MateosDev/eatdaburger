@@ -5,7 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO -->cd ..
 <br />
 <p align="center">
   <h3 align="center">EatDaBurger</h3>
