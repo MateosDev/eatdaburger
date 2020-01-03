@@ -4,7 +4,7 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
+// Serve static content 
 app.use(express.static("public"));
 
 // Parse application body as JSON
@@ -15,7 +15,7 @@ app.use(express.json());
 var exphbs = require("express-handlebars");
 
 
-//THE APP
+//THE TEMPLATE ENGINE
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
