@@ -1,0 +1,23 @@
+* {
+    font-family: "Fontdiner Swanky", cursive;
+  }
+  
+  body {
+    background-image: url("../img/handcrafted-burgers.jpg");
+    background-size: initial;
+    background-color: rgb(228, 127, 219);
+    text-align: center;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  
+  .op-cont {
+    background-color: rgb(146, 198, 247);
+    opacity: 0.9;
+    max-width: 45%;
+    margin: 0 auto;
+  }
